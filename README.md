@@ -5,6 +5,7 @@ Developed by
  * Peter Blazso      - lead bioinformatician, code maintenance
  * Krisztian Csomos  - concepts and testing
  * Boglarka Ujhazi   - data management
+ * Jolan E. Walter   - principal investigator
 
 
 0. Directory structure and definitions
