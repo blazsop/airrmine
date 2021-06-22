@@ -146,11 +146,17 @@ and statistics of single lineage trees.
 
 4.1. Download the supplementary raw data published by our group the same way as
 demo data found in "samples" directory.
+
 4.2. Simply replace demo data with real ones in "airrnat" directory.
+
 4.3. Start "make" in "airrnat" directory. 
+
 4.4. When "airrnat" pipeline finishes you shall copy/move collapsed datasets
 into "prep" directory in "immchaintracer".
+
 4.5. You also need to download and put the corresponding single clone files
 here, as well.
-5.6. Run "make" in "immchaintracer".
-5.7. Copy "lin" directory just like in 4.4. and run analytics.
+
+4.6. Run "make" in "immchaintracer".
+
+4.7. Copy "lin" directory just like in 4.4. and run analytics.
