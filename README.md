@@ -161,5 +161,5 @@ here, as well.
 
  * Peter Blazso : lead bioinformatician, code maintenance
  * Krisztian Csomos : concepts and testing
- * Boglarka Ujhazi : data management
+ * Boglarka Ujhazi : data management and testing
  * Jolan E. Walter : principal investigator
