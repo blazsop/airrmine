@@ -91,7 +91,7 @@ computer.
 * Copy "airrnat", "immchaintracer" and "immchaintracer_analysis" directories
 with their contents to an empty target directory (e.g. airr).
 
-* Copy the <u>contents</u> of "samples" to the same target directory (e.g. airr).
+* Copy the __contents__ of "samples" to the same target directory (e.g. airr).
 
 <b>Important:</b> DO NOT RENAME or MOVE files. Strict file naming and placement
 conventions are used.
@@ -105,11 +105,11 @@ files accordingly:
 * immchaintracer_analysis/scripts/treegen.R
 
 <h4>3.3. Run AIRRNAT pipeline</h4>
-Go into "airrnat" directory and use `make` command to run the different steps of
-the AIRRNAT pipeline or if you just simply run `make` without command line arguments
+Go into "airrnat" directory and use <code>make</code> command to run the different steps of
+the AIRRNAT pipeline or if you just simply run <code>make</code> without command line arguments
 it will run the whole processing toolchain on the raw and pre-processed datasets.
 
-<i>Hint: if you have computing power and want to speed up the whole process, just
+<i>Hint: If you have ample computing power and want to speed up the whole process, just
 use "-j" flag to utilize more CPU cores (e.g. <code>make -j4</code> will start 4 concurrent
 processing threads).</i>
 
