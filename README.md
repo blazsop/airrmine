@@ -8,7 +8,6 @@ Developed by
 
 
 0. Directory structure and definitions
---------------------------------------
 
 Ready to use scripts (without compilation) are found in the following
 directories:
@@ -31,7 +30,6 @@ steps are largely dependent on the output of the previous ones.
 
 
 1. System requirements (software has been tested on)
-----------------------------------------------------
 
 Operating system:
 These scripts are written, used and tested in UNIX/Linux environments
@@ -67,7 +65,7 @@ R library dependencies:
 * treemap      2.4.2
 
 2. Installation guide 
----------------------
+
 Your computer needs to be online during the whole installation process.
 It takes typically 20-30 minutes on a modern multiprocessing computer.
 
@@ -85,17 +83,18 @@ You can install "changeo" with the following command:
 Run "R" and at the R command prompt install the required libraries:
  install.packages(c("alakazam","colorspace","dplyr","igraph","openxlsx","parallel","readr","shazam","tidyr","treemap"))
 
-4. Demonstration material and testing installation
---------------------------------------------------
+
+3. Demonstration material and testing installation
+
 Sample data are processed in an hour on a contemporary, multiprocessing desktop
 computer. 
 
-4.1. Create the directory enviroments
+3.1. Create the directory enviroments
 * copy "airrnat", "immchaintracer" and "immchaintracer_analysis" directories
 with their contents to an empty target directory (e.g. airr)
 * copy the contents of "samples" to the same target directory (e.g. airr)
 
-4.2. Go into "airrnat" directory and use "make" to run the different steps of
+3.2. Go into "airrnat" directory and use "make" to run the different steps of
 the AIRRNAT pipeline or if you just simply run "make" it will run the whole
 processing toolchain on the raw and pre-processed datasets.
 Hint: if you have computing power and want to speed up the whole process, just
@@ -125,8 +124,7 @@ additional directories containing results:
   file suffix "_AIRRND_itypes.svg" : color-coded isotpyes
   file suffix "_AIRRND_agsel.svg"  : heatmap of BASELINe sigma
 
-
-4.3. You can run "make" in "immchaintracer" directory, as well.
+3.3. You can run "make" in "immchaintracer" directory, as well.
 
 Expected data directories with contents are:
 
@@ -137,20 +135,20 @@ Expected data directories with contents are:
 * "clone"    - clonally assigned "mini" repertoires
 * "lin"      - extracted clonal lineages
 
-4.4. If you copy "lin" directory (with contents) from step 4.3. to
+3.4. If you copy "lin" directory (with contents) from step 3.3. to
 "immchaintracer_analysis" and run "make" in it you can generate various plots
 and statistics of single lineage trees.
 
-5. Re-run analytics on real data
---------------------------------
 
-5.1. Download the supplementary raw data published by our group the same way as
+4. Re-run analytics on real data
+
+4.1. Download the supplementary raw data published by our group the same way as
 demo data found in "samples" directory.
-5.2. Simply replace demo data with real ones in "airrnat" directory.
-5.3. Start "make" in "airrnat" directory. 
-5.4. When "airrnat" pipeline finishes you shall copy/move collapsed datasets
+4.2. Simply replace demo data with real ones in "airrnat" directory.
+4.3. Start "make" in "airrnat" directory. 
+4.4. When "airrnat" pipeline finishes you shall copy/move collapsed datasets
 into "prep" directory in "immchaintracer".
-5.5. You also need to download and put the corresponding single clone files
+4.5. You also need to download and put the corresponding single clone files
 here, as well.
 5.6. Run "make" in "immchaintracer".
 5.7. Copy "lin" directory just like in 4.4. and run analytics.
