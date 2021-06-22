@@ -163,6 +163,3 @@ here, as well.
  * Krisztian Csomos : concepts and testing
  * Boglarka Ujhazi : data management
  * Jolan E. Walter : principal investigator
-
-Comments, bugs, questions regarding the code should be addressed to
-Peter Blazso.
