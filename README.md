@@ -55,7 +55,6 @@ are extensively used in the code.
 * dplyr        1.0.7
 * igraph       1.2.6
 * openxlsx     4.2.4
-* parallel     4.0.4
 * readr        1.4.0
 * shazam       1.0.2
 * tidyr        1.1.3
@@ -66,11 +65,11 @@ are extensively used in the code.
 Your computer needs to be online during the whole installation process.
 It takes typically 20-30 minutes on a modern multiprocessing computer.
 
-<h4>2.1. Operating system and software packages</h4>
+<h4>2.1. Operating system and command line software packages</h4>
 Please see your operating system's manual and install the command line
 toolset or make sure they are available. It may need administratory 
 privileges on the system. 
-For example on Ubuntu Linux use apt (e.g.: <code>apt install bash</code>).
+For example on Ubuntu Linux use apt (e.g.: <code>sudo apt install bash</code>).
 
 <h4>2.2. Immcantation framework</h4>
 You can install "changeo" with the following command:
@@ -78,7 +77,7 @@ You can install "changeo" with the following command:
 
 <h4>2.3. R libraries</h4>
 Run <code>R</code> and at the R command prompt install the required libraries:
-<code>install.packages(c("alakazam","colorspace","dplyr","igraph","openxlsx","parallel","readr","shazam","tidyr","treemap"))</code>
+<code>install.packages(c("alakazam","colorspace","dplyr","igraph","openxlsx","readr","shazam","tidyr","treemap"))</code>
 
 <h3>3. Demonstration material and testing installation</h3>
 Sample data are processed in an hour on a contemporary, multiprocessing desktop
@@ -165,5 +164,5 @@ here, as well.
  * Boglarka Ujhazi : data management
  * Jolan E. Walter : principal investigator
 
-Comments, alerts, questions on the code should be addressed to
-Peter Blazso (blazso@gmail.com).
+Comments, bugs, questions regarding the code should be addressed to
+Peter Blazso.
