@@ -51,14 +51,14 @@ are extensively used in the code.
 <h4>1.5. R library dependencies</h4>
 
 * alakazam     1.1.0
-* colorspace   2.0.1
-* dplyr        1.0.7
-* igraph       1.2.6
-* openxlsx     4.2.4
-* readr        1.4.0
 * shazam       1.0.2
-* tidyr        1.1.3
+* igraph       1.2.6
 * treemap      2.4.2
+* dplyr        1.0.7
+* readr        1.4.0
+* tidyr        1.1.3
+* colorspace   2.0.1
+* openxlsx     4.2.4
 
 <h3>2. Installation guide</h3>
 
@@ -79,6 +79,7 @@ You can install "changeo" with the following command:
 Run <code>R</code> and at the R command prompt install the required libraries:
 <code>install.packages(c("alakazam","colorspace","dplyr","igraph","openxlsx","readr","shazam","tidyr","treemap"))</code>
 
+
 <h3>3. Demonstration material and testing installation</h3>
 Sample data are processed in an hour on a contemporary, multiprocessing desktop
 computer. 
@@ -92,7 +93,18 @@ with their contents to an empty target directory (e.g. airr).
 
 * Copy the <u>contents</u> of "samples" to the same target directory (e.g. airr).
 
-<h4>3.2. Run AIRRNAT pipeline</h4>
+<b>Important:</b> DO NOT RENAME or MOVE files. Strict file naming and placement
+conventions are used.
+
+<h4>3.2. Check/modify path to PHYLIP tools</h4>
+If you do not use the standard "phylip" package from a Ubuntu Linux repository or
+if the data processing aborts you need to modify "dnapars_bin" variable in two
+files accordingly:
+
+* airrnat/scripts/generate_nd.R
+* immchaintracer_analysis/scripts/treegen.R
+
+<h4>3.3. Run AIRRNAT pipeline</h4>
 Go into "airrnat" directory and use `make` command to run the different steps of
 the AIRRNAT pipeline or if you just simply run `make` without command line arguments
 it will run the whole processing toolchain on the raw and pre-processed datasets.
@@ -121,10 +133,10 @@ additional directories containing results:
 * <b>graph</b> : AIRR lineage connectivity data and network diagrams
   - file suffix "_AIRRND.svg"   : raw AIRR network diagram
   - file suffix "_AIRRND_mutations.svg" : mutation "heatmap"
-  - file suffix "_AIRRND_itypes.svg" : color-coded isotpyes
+  - file suffix "_AIRRND_itypes.svg" : color-coded isotypes
   - file suffix "_AIRRND_agsel.svg"  : heatmap of BASELINe sigma
 
-<h4>3.3. Run ImmChainTracer pipeline</h4>
+<h4>3.4. Run ImmChainTracer pipeline</h4>
 You can run <code>make</code> in "immchaintracer" directory, as well.
 
 These directories with processed data are created:
@@ -138,9 +150,8 @@ These directories with processed data are created:
 
 * <b>lin</b> : extracted clonal lineages
 
-<h4>3.4. Run analysis on captured lineages</h4>
-
-If you copy "lin" directory (with contents) from step 3.3. to 
+<h4>3.5. Run analysis on captured lineages</h4>
+If you copy "lin" directory (with contents) from step 3.4. to 
 "immchaintracer_analysis" and run <code>make</code> in it you can generate
 various plots and statistics of single lineage trees.
 
@@ -155,7 +166,7 @@ into "prep" directory in "immchaintracer".
 * You also need to download and put the corresponding single clone files
 here, as well.
 * Run <code>make</code> in "immchaintracer".
-* Copy "lin" directory just like in 3.4. and run analytics.
+* Copy "lin" directory just like in 3.5. and run analytics.
 
 <h3>Developed by</h3>
 
