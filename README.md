@@ -170,7 +170,7 @@ here, as well.
 
 <h3>Developed by</h3>
 
- * Peter Blazso : lead bioinformatician, code maintenance
+ * Peter Blazso : development, code maintenance
  * Krisztian Csomos : concepts and testing
  * Boglarka Ujhazi : data management and testing
  * Jolan E. Walter : principal investigator
