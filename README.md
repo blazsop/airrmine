@@ -91,9 +91,10 @@ Sample data are processed in an hour on a contemporary, multiprocessing desktop
 computer. 
 
 3.1. Create the directory enviroments
-* copy "airrnat", "immchaintracer" and "immchaintracer_analysis" directories
-with their contents to an empty target directory (e.g. airr)
-* copy the contents of "samples" to the same target directory (e.g. airr)
+* Unzip "samples.zip".
+* Copy "airrnat", "immchaintracer" and "immchaintracer_analysis" directories
+with their contents to an empty target directory (e.g. airr).
+* Copy the contents of "samples" to the same target directory (e.g. airr).
 
 3.2. Go into "airrnat" directory and use "make" to run the different steps of
 the AIRRNAT pipeline or if you just simply run "make" it will run the whole
