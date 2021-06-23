@@ -86,10 +86,10 @@ computer.
 
 <h4>3.1. Create the directory enviroments</h4>
 
-* Unzip "samples.zip".
-
 * Copy "airrnat", "immchaintracer" and "immchaintracer_analysis" directories
 with their contents to an empty target directory (e.g. airr).
+
+* Unzip "samples.zip".
 
 * Copy the __contents__ of "samples" to the same target directory (e.g. airr).
 
