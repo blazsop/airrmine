@@ -1,15 +1,15 @@
 # -----------------------------------------------------------------------------
 # findthreshold.R
-# version: 1.2 (2020-09-02)
+# version: 1.3 (2025-01-23)
 # author : Peter Blazso
 #
 # Finds distance threshold that separates clonally related from unrelated
 # -----------------------------------------------------------------------------
 
 # load libraries
-library(readr)
-library(shazam)
-library(dplyr)
+library(readr, quietly=T)
+library(shazam, quietly=T)
+library(dplyr, quietly=T)
 
 # insignificant peak of density
 peak_thr = 0.05  # below 5% height of mean peak height is noise
@@ -30,7 +30,7 @@ outbname <- paste( outdir, paste(subj,comp,sep="_"), sep="/")
 
 # read IGMT ".tsv" datafile based on the given input argument
 # and only keep a small sample fraction of it
-seqdb <- read_tsv( dbfile )
+seqdb <- read_tsv( dbfile, show_col_types=F )
 
 if( nrow(seqdb) >= 100000 )
   seqdb <- sample_n( seqdb, 100000, replace=F )
@@ -55,10 +55,20 @@ mean_peaks <- mean(dens$y[peak_pos])
 sigpeak_pos <- peak_pos[ dens$y[peak_pos] >= (mean_peaks * peak_thr) ]
 
 # determine the location of the end of peak = threshold position
-thr_pos <- which(diff(dens$y[ sigpeak_pos[1]:length(dens$y) ]) >= 0 )[[1]] + sigpeak_pos[1]
+thr_pos = sigpeak_pos
+thold = dens$x[ length(dens$y) ]
 
-# determine threshold
-thold <- dens$x[ thr_pos ]
+# in v1.3: treat the situation when there is only one significant peak
+# are there more than one peaks? 
+if( length(sigpeak_pos) > 1 )
+{
+  # yes: find threshold position -> right after the first significant peak
+  thr_pos <- which(diff(dens$y[ sigpeak_pos[1]:length(dens$y) ]) >= 0 )[[1]] + sigpeak_pos[1]
+  # determine threshold
+  thold <- dens$x[ thr_pos ]
+}
+# no: keep the default value = end position of the range
+
 
 # draw plot and put this into a tiff file
 tiff( filename=paste(outbname,"threshold_histo.tiff", sep="_"),
